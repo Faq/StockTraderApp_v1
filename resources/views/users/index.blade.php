@@ -5,13 +5,12 @@
         <div class="card card-body border-0 shadow table-wrapper table-responsive">
             <h2 class="mb-4 h5">{{ __('Users') }}</h2>
 
-            <p class="text-info mb-0">Sample table page</p>
-
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th class="border-gray-200">{{ __('Name') }}</th>
                         <th class="border-gray-200">{{ __('Email') }}</th>
+                        <th class="border-gray-200">{{ __('Balance') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +18,7 @@
                         <tr>
                             <td><span class="fw-normal">{{ $user->name }}</span></td>
                             <td><span class="fw-normal">{{ $user->email }}</span></td>
+                            <td><span class="fw-normal">{{ $user->balance }}</span></td>
                         </tr>
                     @endforeach
                 </tbody>
