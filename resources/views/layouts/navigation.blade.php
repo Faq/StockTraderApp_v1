@@ -28,7 +28,7 @@
             <span class="sidebar-icon me-3">
                 <i class="fas fa-user-alt fa-fw"></i>
             </span>
-            <span class="sidebar-text">{{ __('Users') }}</span>
+            <span class="sidebar-text">{{ __('User list') }}</span>
         </a>
     </li>
 
