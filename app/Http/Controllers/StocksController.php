@@ -31,7 +31,7 @@ class StocksController extends Controller
 
     public function search(Request $request): View
     {
-        $companyName = strtolower($request->get('company'));
+        $companyName = Str::lower($request->get('company'));
         $cacheKey = 'companies.search.' . $companyName;
 
         if (Cache::has($cacheKey))
