@@ -75,4 +75,9 @@
         <label for="company" class="block text-grey-darker text-sm font-bold mb-2">Search stock</label><br>
         <input type="text" id="company" name="company" required/>
     </form>
+    <br>
+    <div class="fw-bold">Balance:
+        <span class="fw-bold text-success">{{Auth::user()->balance}}</span>
+        <span class="fw-bold">USD</span>
+    </div>
 </ul>
