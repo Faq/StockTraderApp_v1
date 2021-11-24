@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ProfileUpdateRequest;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -14,7 +16,8 @@ class ProfileController extends Controller
 
     public function update(ProfileUpdateRequest $request)
     {
-        if ($request->password) {
+        if ($request->password)
+        {
             auth()->user()->update(['password' => Hash::make($request->password)]);
         }
 
@@ -24,5 +27,17 @@ class ProfileController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Profile updated.');
+    }
+
+    public function addFunds(Request $request): RedirectResponse
+    {
+        $topUp = $request->get('topup-amount');
+        if ($topUp > 0)
+        {
+            auth()->user()->deposit($topUp);
+
+            return redirect()->back()->with('success', 'Funds added.');
+        }
+        return redirect()->back()->with('error', 'Invalid amount provided!');
     }
 }
