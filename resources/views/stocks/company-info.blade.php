@@ -24,7 +24,7 @@
                                 </thead>
                                 <tbody>
                                 <td><img src="{{$company->getProfile()->getLogo()}}" class="rounded mx-auto d-block"
-                                         alt="Logo" style="width: 50px">
+                                         alt="Logo" style="width: 40px">
                                 </td>
                                 <td class="col text-center">{{$company->getName()}}</td>
                                 <td class="col text-center">{{$company->getSymbol()}}</td>
@@ -48,12 +48,14 @@
                                              ]) }}"
                                           class="content-center text-sm">
                                         @csrf
-                                        <input class="h-8" id="stock-amount" name="stock-amount" type="text"
-                                               placeholder="Stock amount">
-                                        <button type="submit"
-                                                class="border-black border-2  bg-green-600 text-lg w-12">
-                                            Buy
-                                        </button>
+                                        <div class="input-group mt-2">
+                                            <input class="h-8" id="stock-amount" name="stock-amount" type="text"
+                                                   placeholder="Stock amount">
+                                            <button type="submit"
+                                                    class="btn btn-gray-800 animate-up-2">
+                                                Buy
+                                            </button>
+                                        </div>
                                     </form>
                                 </td>
                                 </tbody>

@@ -91,7 +91,7 @@ class StocksController extends Controller
 
     private function checkTime(): bool
     {
-        return now()->isWeekday() && now()->isBetween(Date::createFromTimeString('00:00'), Date::createFromTimeString('23:00'));
+        return now()->isWeekday() && now()->isBetween(Date::createFromTimeString('16:00'), Date::createFromTimeString('23:00'));
     }
 
 }

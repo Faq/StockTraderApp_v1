@@ -39,11 +39,16 @@
                                         <td class="col text-center">
                                             <form method="post" action="{{ route('sell.stock', $stock) }}">
                                                 @csrf
-                                                <input type="text" name="stock-amount" placeholder="Stock amount"
-                                                      required >
-                                                <button type="submit" class="border-black border-2  bg-green-600 text-lg w-12">
-                                                    Sell
-                                                </button>
+                                                <div class="input-group mt-2">
+                                                    <input type="text" name="stock-amount" class="form-control"
+                                                           placeholder="Stock amount"
+                                                           required>
+                                                        <button type="submit"
+                                                                class="btn btn-gray-800 animate-up-2">
+                                                            Sell
+                                                        </button>
+
+                                                </div>
                                             </form>
                                         </td>
 
