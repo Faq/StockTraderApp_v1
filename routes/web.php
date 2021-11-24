@@ -24,7 +24,10 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('profile', [ProfileController::class, 'addFunds'])->name('wallet.topUp');
     Route::get('/stocks/search',[StocksController::class,'search'])->middleware('auth')->name('stock.searchByName');
-    Route::get('/stocks/{company}/info',[StocksController::class,'view'])->middleware('auth')->name('stocks.info');
+    Route::get('/stocks/{company}/info',[StocksController::class,'view'])->middleware('auth')->name('stock.info');
+
+    Route::get('/transactions', [TradersController::class, 'transactions'])->middleware(['auth', 'verified'])->name('transactions');
+    Route::get('/user/portfolio', [StocksController::class, 'portfolio'])->middleware(['auth', 'verified'])->name('portfolio');
 });
 
 
