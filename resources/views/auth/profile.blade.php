@@ -100,12 +100,17 @@
                         <h2 class="h5 mb-4">{{ __('My wallet') }}</h2>
                         <form method="POST" action="{{ route('wallet.topUp') }}">
                             @csrf
-                            <div class="input-group col-md-2">
-                                <input type="text" name="stock-amount" class="form-control"
-                                       placeholder="Stock amount"
+                            <div class="input-group">
+                                <div class="mb-2">
+                                <input type="text" name="topup-amount" class="form-control"
+                                       placeholder="$ amount"
                                        required>
-                                <button type="submit" class="btn btn-gray-800 ">Sell</button>
+                                </div>
                             </div>
+                            <br>
+                                <div class="mb-2">
+                                    <button type="submit" class="btn btn-gray-800">Top Up</button>
+                                </div>
                         </form>
                     </div>
                 </div>
