@@ -19,8 +19,10 @@ To get it working, follow these steps:
 
 3. make empty databse (charset:"utf8mb4", collation: "utf8mb4_unicode_ci") with the name what entered in "DB_DATABASE=",
 
-4. open in consele projects directory and use these two commands to install dependencies:
+4. open project diroctory in your favorite editor (VSCode/PHPStorm) and in console use these two commands to install dependencies:
+
    npm install
+
    composer install
 5. run:
 
